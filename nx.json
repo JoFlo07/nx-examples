@@ -48,7 +48,14 @@
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
     },
     "lint": {
-      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "{projectRoot}/**/*.ts",
+          "{projectRoot}/**/*.html"
+        ]
+      },
+      "outputs": ["{options.outputFile}"]
     }
   },
   "namedInputs": {

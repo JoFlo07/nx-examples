@@ -5,16 +5,6 @@
   "projectType": "library",
   "generators": {},
   "targets": {
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/cart/cart-page/src/**/*.ts",
-          "libs/cart/cart-page/src/**/*.html"
-        ]
-      },
-      "outputs": ["{options.outputFile}"]
-    },
     "test": {
       "executor": "@nx/jest:jest",
       "options": {
